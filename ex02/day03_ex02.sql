@@ -1,4 +1,4 @@
-SELECT m.pizza_name, m.price, pz.name
+SELECT m.pizza_name, m.price, pz.name AS pizzeria_name
     FROM menu AS m
 LEFT JOIN person_order AS po
     ON po.menu_id = m.id
