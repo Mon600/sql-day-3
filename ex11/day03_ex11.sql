@@ -1,5 +1,5 @@
 UPDATE menu
-    SET price = (price + (price * 0.1))::INTEGER
+    SET price = (price - (price * 0.1))::INTEGER
 WHERE pizza_name = 'greek pizza';
 
 SELECT *
