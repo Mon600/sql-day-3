@@ -8,3 +8,6 @@ VALUES (
 SELECT *
     FROM menu
 WHERE id = (SELECT COALESCE(MAX(id), 0) FROM menu);
+
+-- DELETE FROM menu
+-- WHERE id = (SELECT COALESCE(MAX(id), 0) FROM menu);
