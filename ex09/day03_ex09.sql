@@ -9,8 +9,8 @@ VALUES (
 INSERT INTO person_visits (id, person_id, pizzeria_id, visit_date)
 VALUES (
     (SELECT COALESCE(MAX(id), 0) + 1 FROM person_visits),
-    (SELECT id FROM person WHERE name = 'Irina'),
-    (SELECT id FROM pizzeria WHERE name LIKE '%Dominos%'),
+    (SELECT id FROM person WHERE name = 'Irina' LIMIT 1),
+    (SELECT id FROM pizzeria WHERE name LIKE '%Dominos%' LIMIT 1),
     '2022-02-24'
 );
 
